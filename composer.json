@@ -7,6 +7,9 @@
             "Alexs\\DNSChecker\\": "src/"
         }
     },
+    "scripts": {
+        "test": "phpunit"
+    },
     "authors": [
         {
             "name": "AlexStrilBy",

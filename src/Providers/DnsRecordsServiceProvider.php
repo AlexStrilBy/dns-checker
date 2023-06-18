@@ -3,7 +3,7 @@
 namespace Alexs\DNSChecker\Providers;
 
 use Alexs\DNSChecker\DnsRecordsService;
-use Alexs\DNSChecker\DnsResolver;
+use Alexs\DNSChecker\Resolver\DnsResolver;
 use Illuminate\Support\ServiceProvider;
 
 class DnsRecordsServiceProvider extends ServiceProvider

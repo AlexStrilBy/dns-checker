@@ -1,10 +1,10 @@
 <?php
 
-namespace Alexs\DNSChecker;
+namespace Alexs\DNSChecker\Resolver;
 
-class DnsResolver
+class DnsResolver implements IDnsResolver
 {
-    private function getRecord($domain, $type): false|array
+    public function getRecord($domain, $type): false|array
     {
         return dns_get_record($domain, $type);
     }

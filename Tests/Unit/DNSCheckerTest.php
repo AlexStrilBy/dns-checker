@@ -3,14 +3,15 @@
 namespace Unit;
 
 use Alexs\DNSChecker\DnsRecordsService;
-use Alexs\DNSChecker\DnsResolver;
+use Alexs\DNSChecker\Resolver\DnsResolver;
+use Alexs\DNSChecker\Resolver\IDnsResolver;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class DNSCheckerTest extends TestCase
 {
     /**
-     * @var DnsResolver|\Mockery\MockInterface
+     * @var IDnsResolver|\Mockery\MockInterface
      */
     private $dnsResolverMock;
 
@@ -18,7 +19,7 @@ class DNSCheckerTest extends TestCase
 
     public function setUp(): void
     {
-        $this->dnsResolverMock = Mockery::mock(DnsResolver::class);
+        $this->dnsResolverMock = Mockery::mock(IDnsResolver::class);
         $this->dnsRecordsService = new DnsRecordsService($this->dnsResolverMock);
     }
 
@@ -30,7 +31,7 @@ class DNSCheckerTest extends TestCase
         foreach ($dnsTypes as $dnsType) {
             $returnData[] = [
                 'type' => $dnsType,
-                'name' => 'google.com',
+                'host' => 'google.com',
                 'ttl' => 3600,
                 'data' => '8.8.8.8',
             ];

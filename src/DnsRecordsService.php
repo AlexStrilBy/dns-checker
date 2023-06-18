@@ -2,9 +2,11 @@
 
 namespace Alexs\DNSChecker;
 
+use Alexs\DNSChecker\Resolver\IDnsResolver;
+
 class DnsRecordsService
 {
-    protected DnsResolver $resolver;
+    protected IDnsResolver $resolver;
 
     public function __construct($resolver)
     {

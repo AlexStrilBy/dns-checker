@@ -3,13 +3,14 @@
 namespace Feature;
 
 use Alexs\DNSChecker\DnsRecordsService;
-use Alexs\DNSChecker\DnsResolver;
+use Alexs\DNSChecker\Resolver\DnsResolver;
+use Alexs\DNSChecker\Resolver\IDnsResolver;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class DNSCheckerTest extends TestCase
 {
-    private DnsResolver $dnsResolver;
+    private IDnsResolver $dnsResolver;
 
     private DnsRecordsService $dnsRecordsService;
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+        backupGlobals="false"
+        bootstrap="vendor/autoload.php"
+        colors="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        executionOrder="random"
+        failOnWarning="false"
+        failOnRisky="true"
+        failOnEmptyTestSuite="true"
+        beStrictAboutOutputDuringTests="true"
+        displayDetailsOnTestsThatTriggerWarnings="true"
+>
+    <testsuites>
+        <testsuite name="DNS checker unit test">
+            <directory>Tests</directory>
+        </testsuite>
+    </testsuites>
+    <logging>
+        <junit outputFile=".phpunit.result.cache"/>
+    </logging>
+</phpunit>
