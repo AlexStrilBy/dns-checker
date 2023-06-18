@@ -1,5 +1,5 @@
 {
-    "name": "alexs/dns-checker",
+    "name": "alexstrilby/dns-checker",
     "description": "DNS checker",
     "type": "library",
     "autoload": {
